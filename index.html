@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Micro Movie Gallery</title>
+
+<style>
+    :root {
+        --bg: #0f1220;
+        --card: rgba(255, 255, 255, 0.08);
+        --text: #e8e8f0;
+        --subtext: #a9acc4;
+        --accent: #6c7cff;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", system-ui, sans-serif;
+    }
+
+    body {
+        min-height: 100vh;
+        background: radial-gradient(circle at top, #1b1f3b, var(--bg));
+        color: var(--text);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        width: min(1100px, 90%);
+    }
+
+    h1 {
+        text-align: center;
+        font-weight: 500;
+        letter-spacing: 1px;
+        margin-bottom: 2rem;
+        color: var(--accent);
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .card {
+        background: var(--card);
+        backdrop-filter: blur(10px);
+        border-radius: 16px;
+        padding: 1.4rem;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+    }
+
+    .card:hover {
+        transform: translateY(-10px) scale(1.03);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .card h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .card p {
+        font-size: 0.9rem;
+        color: var(--subtext);
+        line-height: 1.4;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Micro Movie Atlas</h1>
+
+    <div class="grid">
+        <div class="card">
+            <h3>Inception</h3>
+            <p>A thief navigates layered dreams where reality bends and time fractures.</p>
+        </div>
+
+        <div class="card">
+            <h3>Interstellar</h3>
+            <p>Humanity searches the stars while love transcends space and time.</p>
+        </div>
+
+        <div class="card">
+            <h3>The Matrix</h3>
+            <p>A simulated world collapses when truth rewires perception.</p>
+        </div>
+
+        <div class="card">
+            <h3>Parasite</h3>
+            <p>A darkly comic collision of class, greed, and survival.</p>
+        </div>
+
+        <div class="card">
+            <h3>Blade Runner 2049</h3>
+            <p>Identity dissolves in a neon future haunted by memory.</p>
+        </div>
+
+        <div class="card">
+            <h3>Fight Club</h3>
+            <p>An underground rebellion against modern emptiness.</p>
+        </div>
+
+        <div class="card">
+            <h3>Arrival</h3>
+            <p>Language reshapes time as first contact changes destiny.</p>
+        </div>
+
+        <div class="card">
+            <h3>Her</h3>
+            <p>A fragile romance between a man and artificial consciousness.</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
